@@ -24,9 +24,10 @@ entity Books : cuid, managed {
     isReviewable : TechnicalBooleanFlag not null default true;
 }
 
+@good
 entity Authors : cuid, managed {
     @assert.format : '^\p{Lu}.*' // assert that name starts with a capital letter
-    name         : String(111);
+    name         : String(111) @well;
     dateOfBirth  : Date;
     dateOfDeath  : Date;
     placeOfBirth : String;

@@ -15,16 +15,18 @@ cds:
     mtxs.enabled: true
   security:
     authentication.normalize-provider-tenant: true
-    mock.users:
-      admin:
-        password: admin
-        roles:
-        - admin
-        attributes:
-          businessPartner:
-          - "10401010"
-      user:
-        password: user
+    mock:
+      enabled: true
+      users:
+        admin:
+          password: admin
+          roles:
+          - admin
+          attributes:
+            businessPartner:
+            - "10401010"
+        user:
+          password: user
 server.servlet.encoding:
   charset: UTF-8
   force: true
